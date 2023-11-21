@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="crude.css">         
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+          tailwind.config = {
+            theme: {
+              screens:{
+                sm:'480px',
+                md:'768px',
+                lg:'976px',
+                xl:'1440px',
+                
+              },
+
+              extend: {
+                colors: {
+                  clifford: '#da373d',
+                  babyb:'#2596be',
+                }
+              }
+            }
+          } </script>
+    </head>
+    <body>
+        <div class="py-4 w-9/12 mx-auto"><h1 class="py-3 text-2xl">Product Management System</h1>
+            <label  for="productnameinput">ProductName:</label>
+            <input class=" w-full border rounded-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent  mb-2" type="text" name="" id="productnameinput" >
+            <label  for="productpriceinput">ProductPrice:</label>
+            <input class=" w-full border rounded-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent  mb-2" type="text" name="" id="productpriceinput" type="text" name="" id="productpriceinput" >
+            <label  for="productcateinput">ProductCategory:</label>
+            <input class=" w-full border rounded-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent  mb-2" type="text" name="" id="productcateinput" >
+            <label  for="productdescriptioninput">ProductDescription:</label>
+            <input class=" w-full border rounded-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent  mb-2" type="text" name="" id="productdescriptioninput" >
+            <button onclick="test()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"> Add Product</button>
+
+        </div>
+        <div class="py-5 w-9/12 mx-auto">
+            <table class="  w-full text-center">
+                <thead class="border-b border-slate-300" >
+                    
+                        <th class="px-4 py-2">index</th>
+                        <th class="px-4 py-2">Product Name</th>
+                        <th class="px-4 py-2">Product Price</th>
+                        <th class="px-4 py-2">Product Category</th>
+                        <th class="px-4 py-2">Product Description</th>
+                    
+                        <th class="px-4 py-2">Delete</th>
+                    
+                        <th class="px-4 py-2">Update</th>
+                    
+                </thead>
+                <tbody id="producttable">
+                  
+                  
+                    
+                </tbody>
+            </table>
+        <script src="crud.js"></script>
+    </body>
+</html>
