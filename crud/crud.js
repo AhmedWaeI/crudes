@@ -9,7 +9,7 @@ if(localStorage.getItem("Product")!=null)
     productcontainer=JSON.parse(localStorage.getItem("Product"));
     display() 
 }
-function test()
+function add()
 {
 
     var product=
@@ -19,10 +19,17 @@ function test()
         description:productdescription.value,
         category:productcategory.value,
     }
-    productcontainer.push(product);
-    localStorage.setItem("Product",JSON.stringify(productcontainer));
-    clearform();
-    display();
+    if(validatename()==true)
+    {
+        productcontainer.push(product);
+        localStorage.setItem("Product",JSON.stringify(productcontainer));
+        clearform();
+        display();   
+    }
+    else
+    {
+        alert("Please Enter Valid Name");}
+    
 }
 function clearform()
 {
@@ -75,4 +82,13 @@ for(var i=0;i<productcontainer.length;i++)
 }
 document.getElementById("producttable").innerHTML=tablerow;
 
+}
+function validatename()
+{
+    var regex = /^[A-Z][a-z]{3,8}$/;
+    if(regex.test(productname.value)==true)
+    {
+        return true;
+    }
+    else return false;
 }
