@@ -92,3 +92,12 @@ function validatename()
     }
     else return false;
 }
+function validateage()
+{
+    var regex = /^(80|[1-7][0-9])$/;
+    if(regex.test(productname.value)==true)
+    {
+        return true;
+    }
+    else return false;
+}
